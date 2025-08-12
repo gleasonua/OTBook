@@ -1,0 +1,9 @@
+    on: push
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        permissions:
+          contents: write # Required for creating GitHub releases
+        steps:
+          - name: Compile with BookML
+            uses: vlmantova/bookml-action@v1 # Uses the BookML GitHub Action
